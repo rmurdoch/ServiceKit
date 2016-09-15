@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DBFD1EFE1D8B5BF7003268EE /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1EFD1D8B5BF7003268EE /* NSObjectExtension.swift */; };
+		DBFD1F021D8B5C09003268EE /* GETRequestObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1EFF1D8B5C09003268EE /* GETRequestObjects.swift */; };
+		DBFD1F031D8B5C09003268EE /* GETRequestStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F001D8B5C09003268EE /* GETRequestStructs.swift */; };
+		DBFD1F041D8B5C09003268EE /* POSTRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F011D8B5C09003268EE /* POSTRequests.swift */; };
+		DBFD1F091D8B5C1F003268EE /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F051D8B5C1F003268EE /* Protocols.swift */; };
+		DBFD1F0A1D8B5C1F003268EE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F061D8B5C1F003268EE /* Request.swift */; };
+		DBFD1F0B1D8B5C1F003268EE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F071D8B5C1F003268EE /* Response.swift */; };
+		DBFD1F0C1D8B5C1F003268EE /* Wrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F081D8B5C1F003268EE /* Wrapping.swift */; };
 		E401591A1D873427002FC58A /* JsonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40159181D873427002FC58A /* JsonExtensions.swift */; };
 		E401591B1D873427002FC58A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40159191D873427002FC58A /* StringExtension.swift */; };
 		E414956C1D809DC30034630F /* ServiceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41495621D809DC30034630F /* ServiceKit.framework */; };
 		E41495711D809DC30034630F /* ServiceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41495701D809DC30034630F /* ServiceKitTests.swift */; };
 		E41495731D809DC30034630F /* ServiceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E41495651D809DC30034630F /* ServiceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E414957D1D809DE50034630F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E414957C1D809DE50034630F /* Protocols.swift */; };
-		E414957F1D809E070034630F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E414957E1D809E070034630F /* Request.swift */; };
 		E41495811D80A03F0034630F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41495801D80A03F0034630F /* Service.swift */; };
-		E41495831D80A1F60034630F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41495821D80A1F60034630F /* Response.swift */; };
-		E414958B1D80AABB0034630F /* Wrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = E414958A1D80AABB0034630F /* Wrapping.swift */; };
 		E414958F1D80AE840034630F /* XCTestCase+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = E414958E1D80AE840034630F /* XCTestCase+Async.m */; };
-		E41DD18D1D886C3200B8ECCA /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41DD18C1D886C3200B8ECCA /* NSObjectExtension.swift */; };
-		E41DF1261D8AF4C300BC7EDF /* GETRequestObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41DF1251D8AF4C300BC7EDF /* GETRequestObjects.swift */; };
 		E41DF12D1D8AFF1F00BC7EDF /* ServiceObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DF12C1D8AFF1F00BC7EDF /* ServiceObjCTests.m */; };
-		E41DF12F1D8B015F00BC7EDF /* GETRequestStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41DF12E1D8B015F00BC7EDF /* GETRequestStructs.swift */; };
-		E41DF1321D8B05D500BC7EDF /* POSTRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41DF1311D8B05D500BC7EDF /* POSTRequests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DBFD1EFD1D8B5BF7003268EE /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObjectExtension.swift; path = Extensions/NSObjectExtension.swift; sourceTree = "<group>"; };
+		DBFD1EFF1D8B5C09003268EE /* GETRequestObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GETRequestObjects.swift; path = "Request:Response/GETRequestObjects.swift"; sourceTree = "<group>"; };
+		DBFD1F001D8B5C09003268EE /* GETRequestStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GETRequestStructs.swift; path = "Request:Response/GETRequestStructs.swift"; sourceTree = "<group>"; };
+		DBFD1F011D8B5C09003268EE /* POSTRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = POSTRequests.swift; path = "Request:Response/POSTRequests.swift"; sourceTree = "<group>"; };
+		DBFD1F051D8B5C1F003268EE /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = "Request:Response Protocols/Protocols.swift"; sourceTree = "<group>"; };
+		DBFD1F061D8B5C1F003268EE /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.swift; path = "Request:Response Protocols/Request.swift"; sourceTree = "<group>"; };
+		DBFD1F071D8B5C1F003268EE /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = "Request:Response Protocols/Response.swift"; sourceTree = "<group>"; };
+		DBFD1F081D8B5C1F003268EE /* Wrapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wrapping.swift; path = "Request:Response Protocols/Wrapping.swift"; sourceTree = "<group>"; };
 		E40159181D873427002FC58A /* JsonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonExtensions.swift; path = Extensions/JsonExtensions.swift; sourceTree = "<group>"; };
 		E40159191D873427002FC58A /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extensions/StringExtension.swift; sourceTree = "<group>"; };
 		E41495621D809DC30034630F /* ServiceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ServiceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,20 +52,12 @@
 		E414956B1D809DC30034630F /* ServiceKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiceKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41495701D809DC30034630F /* ServiceKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceKitTests.swift; sourceTree = "<group>"; };
 		E41495721D809DC30034630F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E414957C1D809DE50034630F /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		E414957E1D809E070034630F /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		E41495801D80A03F0034630F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		E41495821D80A1F60034630F /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		E414958A1D80AABB0034630F /* Wrapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wrapping.swift; sourceTree = "<group>"; };
 		E414958C1D80AE840034630F /* ServiceKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ServiceKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		E414958D1D80AE840034630F /* XCTestCase+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+Async.h"; sourceTree = "<group>"; };
 		E414958E1D80AE840034630F /* XCTestCase+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+Async.m"; sourceTree = "<group>"; };
-		E41DD18C1D886C3200B8ECCA /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
-		E41DF1251D8AF4C300BC7EDF /* GETRequestObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GETRequestObjects.swift; sourceTree = "<group>"; };
 		E41DF12B1D8AFF1F00BC7EDF /* ServiceObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceObjCTests.h; sourceTree = "<group>"; };
 		E41DF12C1D8AFF1F00BC7EDF /* ServiceObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceObjCTests.m; sourceTree = "<group>"; };
-		E41DF12E1D8B015F00BC7EDF /* GETRequestStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GETRequestStructs.swift; sourceTree = "<group>"; };
-		E41DF1311D8B05D500BC7EDF /* POSTRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POSTRequests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +126,8 @@
 		E41DF1301D8B05C900BC7EDF /* GET */ = {
 			isa = PBXGroup;
 			children = (
-				E41DF1251D8AF4C300BC7EDF /* GETRequestObjects.swift */,
-				E41DF12E1D8B015F00BC7EDF /* GETRequestStructs.swift */,
+				DBFD1EFF1D8B5C09003268EE /* GETRequestObjects.swift */,
+				DBFD1F001D8B5C09003268EE /* GETRequestStructs.swift */,
 			);
 			name = GET;
 			sourceTree = "<group>";
@@ -135,7 +135,7 @@
 		E41DF1331D8B05D900BC7EDF /* POST */ = {
 			isa = PBXGroup;
 			children = (
-				E41DF1311D8B05D500BC7EDF /* POSTRequests.swift */,
+				DBFD1F011D8B5C09003268EE /* POSTRequests.swift */,
 			);
 			name = POST;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 		E475D2DD1D834F2C00A2A4DD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E41DD18C1D886C3200B8ECCA /* NSObjectExtension.swift */,
+				DBFD1EFD1D8B5BF7003268EE /* NSObjectExtension.swift */,
 				E40159181D873427002FC58A /* JsonExtensions.swift */,
 				E40159191D873427002FC58A /* StringExtension.swift */,
 			);
@@ -163,10 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				E41495801D80A03F0034630F /* Service.swift */,
-				E414957C1D809DE50034630F /* Protocols.swift */,
-				E414957E1D809E070034630F /* Request.swift */,
-				E41495821D80A1F60034630F /* Response.swift */,
-				E414958A1D80AABB0034630F /* Wrapping.swift */,
+				DBFD1F051D8B5C1F003268EE /* Protocols.swift */,
+				DBFD1F061D8B5C1F003268EE /* Request.swift */,
+				DBFD1F071D8B5C1F003268EE /* Response.swift */,
+				DBFD1F081D8B5C1F003268EE /* Wrapping.swift */,
 			);
 			name = "Service Protocols";
 			sourceTree = "<group>";
@@ -233,7 +233,6 @@
 				TargetAttributes = {
 					E41495611D809DC30034630F = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = M4F439NXD4;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -286,16 +285,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E401591A1D873427002FC58A /* JsonExtensions.swift in Sources */,
-				E41DF12F1D8B015F00BC7EDF /* GETRequestStructs.swift in Sources */,
-				E414958B1D80AABB0034630F /* Wrapping.swift in Sources */,
-				E41495831D80A1F60034630F /* Response.swift in Sources */,
-				E41DD18D1D886C3200B8ECCA /* NSObjectExtension.swift in Sources */,
-				E414957D1D809DE50034630F /* Protocols.swift in Sources */,
+				DBFD1F031D8B5C09003268EE /* GETRequestStructs.swift in Sources */,
+				DBFD1F021D8B5C09003268EE /* GETRequestObjects.swift in Sources */,
+				DBFD1EFE1D8B5BF7003268EE /* NSObjectExtension.swift in Sources */,
+				DBFD1F0B1D8B5C1F003268EE /* Response.swift in Sources */,
 				E401591B1D873427002FC58A /* StringExtension.swift in Sources */,
-				E414957F1D809E070034630F /* Request.swift in Sources */,
-				E41DF1321D8B05D500BC7EDF /* POSTRequests.swift in Sources */,
-				E41DF1261D8AF4C300BC7EDF /* GETRequestObjects.swift in Sources */,
+				DBFD1F041D8B5C09003268EE /* POSTRequests.swift in Sources */,
+				DBFD1F0C1D8B5C1F003268EE /* Wrapping.swift in Sources */,
 				E41495811D80A03F0034630F /* Service.swift in Sources */,
+				DBFD1F0A1D8B5C1F003268EE /* Request.swift in Sources */,
+				DBFD1F091D8B5C1F003268EE /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +424,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = M4F439NXD4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -446,7 +445,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = M4F439NXD4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
