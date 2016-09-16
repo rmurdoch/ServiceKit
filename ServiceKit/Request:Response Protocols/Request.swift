@@ -82,7 +82,9 @@ extension Request {
             connectRequest.httpBody = self.data
         }
         
-        connectRequest.allHTTPHeaderFields = self.headers
+        if (self.headers as NSDictionary).allValues.count > 0 {
+            connectRequest.allHTTPHeaderFields = self.headers
+        }
         
         return connectRequest
     }
