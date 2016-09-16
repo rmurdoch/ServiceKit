@@ -77,7 +77,6 @@ extension Request {
         var connectRequest = URLRequest(url: self.urlForService, cachePolicy: .useProtocolCachePolicy, timeoutInterval: self.timeout)
         connectRequest.httpMethod = method.rawValue
         
-        
         if (self.asJSON as! NSDictionary).allValues.count > 0 {
             connectRequest.httpBody = self.data
         }
@@ -92,7 +91,6 @@ extension Request {
     //MARK: Headers for allHTTPHeaderFields: Below is blank for override
     public var headers: [String: String] { return [:] }
     
-    
     internal var urlForService: URL {
         let urlString = "\(Service.sharedInstance.serverURL)" + "\(self.endPoint)"
         return URL(string: urlString)!
@@ -101,7 +99,6 @@ extension Request {
     public var timeout: TimeInterval {
         return 10
     }
-    
     
     internal var data: Data {
         let dictionary = NSDictionary(dictionary: self.asJSON as! NSDictionary)
@@ -116,7 +113,7 @@ extension Request {
 
 
 //Want to generate request based on if Request is JSONRepresentable. For example POST or PUT
-//// this gives an implementation to request when its a JSONRepresentable
+// This gives an implementation to request when its a JSONRepresentable
 extension JSONRepresentable where Self: Request {
     func generateRequest() -> URLRequest {
         
