@@ -7,6 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DBA24FF61D8C41C200345364 /* JsonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40159181D873427002FC58A /* JsonExtensions.swift */; };
+		DBA24FF71D8C41C200345364 /* GETRequestStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F001D8B5C09003268EE /* GETRequestStructs.swift */; };
+		DBA24FF81D8C41C200345364 /* GETRequestObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1EFF1D8B5C09003268EE /* GETRequestObjects.swift */; };
+		DBA24FF91D8C41C200345364 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1EFD1D8B5BF7003268EE /* NSObjectExtension.swift */; };
+		DBA24FFA1D8C41C200345364 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F071D8B5C1F003268EE /* Response.swift */; };
+		DBA24FFB1D8C41C200345364 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40159191D873427002FC58A /* StringExtension.swift */; };
+		DBA24FFC1D8C41C200345364 /* POSTRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F011D8B5C09003268EE /* POSTRequests.swift */; };
+		DBA24FFD1D8C41C200345364 /* Wrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F081D8B5C1F003268EE /* Wrapping.swift */; };
+		DBA24FFE1D8C41C200345364 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41495801D80A03F0034630F /* Service.swift */; };
+		DBA24FFF1D8C41C200345364 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F061D8B5C1F003268EE /* Request.swift */; };
+		DBA250001D8C41C200345364 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F051D8B5C1F003268EE /* Protocols.swift */; };
+		DBA250031D8C41C200345364 /* ServiceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E41495651D809DC30034630F /* ServiceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBA2500C1D8C421300345364 /* JsonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40159181D873427002FC58A /* JsonExtensions.swift */; };
+		DBA2500D1D8C421300345364 /* GETRequestStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F001D8B5C09003268EE /* GETRequestStructs.swift */; };
+		DBA2500E1D8C421300345364 /* GETRequestObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1EFF1D8B5C09003268EE /* GETRequestObjects.swift */; };
+		DBA2500F1D8C421300345364 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1EFD1D8B5BF7003268EE /* NSObjectExtension.swift */; };
+		DBA250101D8C421300345364 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F071D8B5C1F003268EE /* Response.swift */; };
+		DBA250111D8C421300345364 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40159191D873427002FC58A /* StringExtension.swift */; };
+		DBA250121D8C421300345364 /* POSTRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F011D8B5C09003268EE /* POSTRequests.swift */; };
+		DBA250131D8C421300345364 /* Wrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F081D8B5C1F003268EE /* Wrapping.swift */; };
+		DBA250141D8C421300345364 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41495801D80A03F0034630F /* Service.swift */; };
+		DBA250151D8C421300345364 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F061D8B5C1F003268EE /* Request.swift */; };
+		DBA250161D8C421300345364 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F051D8B5C1F003268EE /* Protocols.swift */; };
+		DBA250191D8C421300345364 /* ServiceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E41495651D809DC30034630F /* ServiceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBA250221D8C423400345364 /* JsonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40159181D873427002FC58A /* JsonExtensions.swift */; };
+		DBA250231D8C423400345364 /* GETRequestStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F001D8B5C09003268EE /* GETRequestStructs.swift */; };
+		DBA250241D8C423400345364 /* GETRequestObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1EFF1D8B5C09003268EE /* GETRequestObjects.swift */; };
+		DBA250251D8C423400345364 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1EFD1D8B5BF7003268EE /* NSObjectExtension.swift */; };
+		DBA250261D8C423400345364 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F071D8B5C1F003268EE /* Response.swift */; };
+		DBA250271D8C423400345364 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40159191D873427002FC58A /* StringExtension.swift */; };
+		DBA250281D8C423400345364 /* POSTRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F011D8B5C09003268EE /* POSTRequests.swift */; };
+		DBA250291D8C423400345364 /* Wrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F081D8B5C1F003268EE /* Wrapping.swift */; };
+		DBA2502A1D8C423400345364 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41495801D80A03F0034630F /* Service.swift */; };
+		DBA2502B1D8C423400345364 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F061D8B5C1F003268EE /* Request.swift */; };
+		DBA2502C1D8C423400345364 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F051D8B5C1F003268EE /* Protocols.swift */; };
+		DBA2502F1D8C423400345364 /* ServiceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E41495651D809DC30034630F /* ServiceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBA250921D8C437A00345364 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBA2508E1D8C437A00345364 /* Info.plist */; };
+		DBA250931D8C437A00345364 /* ServiceKitMacOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBA2508F1D8C437A00345364 /* ServiceKitMacOS-Info.plist */; };
+		DBA250941D8C437A00345364 /* ServiceKitTVOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBA250901D8C437A00345364 /* ServiceKitTVOS-Info.plist */; };
+		DBA250951D8C437A00345364 /* ServiceKitWatchOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBA250911D8C437A00345364 /* ServiceKitWatchOS-Info.plist */; };
 		DBFD1EFE1D8B5BF7003268EE /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1EFD1D8B5BF7003268EE /* NSObjectExtension.swift */; };
 		DBFD1F021D8B5C09003268EE /* GETRequestObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1EFF1D8B5C09003268EE /* GETRequestObjects.swift */; };
 		DBFD1F031D8B5C09003268EE /* GETRequestStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD1F001D8B5C09003268EE /* GETRequestStructs.swift */; };
@@ -36,6 +76,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DBA250081D8C41C200345364 /* ServiceKitWatchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ServiceKitWatchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA2501E1D8C421300345364 /* ServiceKitTVOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ServiceKitTVOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA250341D8C423400345364 /* ServiceKitMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ServiceKitMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA2508E1D8C437A00345364 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Info Plists/Info.plist"; sourceTree = "<group>"; };
+		DBA2508F1D8C437A00345364 /* ServiceKitMacOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ServiceKitMacOS-Info.plist"; path = "Info Plists/ServiceKitMacOS-Info.plist"; sourceTree = "<group>"; };
+		DBA250901D8C437A00345364 /* ServiceKitTVOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ServiceKitTVOS-Info.plist"; path = "Info Plists/ServiceKitTVOS-Info.plist"; sourceTree = "<group>"; };
+		DBA250911D8C437A00345364 /* ServiceKitWatchOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ServiceKitWatchOS-Info.plist"; path = "Info Plists/ServiceKitWatchOS-Info.plist"; sourceTree = "<group>"; };
 		DBFD1EFD1D8B5BF7003268EE /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = NSObjectExtension.swift; path = Extensions/NSObjectExtension.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DBFD1EFF1D8B5C09003268EE /* GETRequestObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = GETRequestObjects.swift; path = "Request:Response/GETRequestObjects.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DBFD1F001D8B5C09003268EE /* GETRequestStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = GETRequestStructs.swift; path = "Request:Response/GETRequestStructs.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -48,7 +95,6 @@
 		E40159191D873427002FC58A /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extensions/StringExtension.swift; sourceTree = "<group>"; };
 		E41495621D809DC30034630F /* ServiceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ServiceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41495651D809DC30034630F /* ServiceKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceKit.h; sourceTree = "<group>"; };
-		E41495661D809DC30034630F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E414956B1D809DC30034630F /* ServiceKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiceKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41495701D809DC30034630F /* ServiceKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceKitTests.swift; sourceTree = "<group>"; };
 		E41495721D809DC30034630F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +107,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DBA250011D8C41C200345364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA250171D8C421300345364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA2502D1D8C423400345364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E414955E1D809DC30034630F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,6 +146,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DBA250361D8C42B200345364 /* Info Plists */ = {
+			isa = PBXGroup;
+			children = (
+				DBA2508E1D8C437A00345364 /* Info.plist */,
+				DBA2508F1D8C437A00345364 /* ServiceKitMacOS-Info.plist */,
+				DBA250901D8C437A00345364 /* ServiceKitTVOS-Info.plist */,
+				DBA250911D8C437A00345364 /* ServiceKitWatchOS-Info.plist */,
+			);
+			name = "Info Plists";
+			sourceTree = "<group>";
+		};
 		E41495581D809DC30034630F = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +171,9 @@
 			children = (
 				E41495621D809DC30034630F /* ServiceKit.framework */,
 				E414956B1D809DC30034630F /* ServiceKitTests.xctest */,
+				DBA250081D8C41C200345364 /* ServiceKitWatchOS.framework */,
+				DBA2501E1D8C421300345364 /* ServiceKitTVOS.framework */,
+				DBA250341D8C423400345364 /* ServiceKitMacOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,7 +185,7 @@
 				E4F11E6F1D81DFF3001F9E25 /* Service Protocols */,
 				E48059141D86FCD6000FD0DB /* Request/Response */,
 				E475D2DD1D834F2C00A2A4DD /* Extensions */,
-				E41495661D809DC30034630F /* Info.plist */,
+				DBA250361D8C42B200345364 /* Info Plists */,
 			);
 			path = ServiceKit;
 			sourceTree = "<group>";
@@ -174,6 +255,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		DBA250021D8C41C200345364 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA250031D8C41C200345364 /* ServiceKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA250181D8C421300345364 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA250191D8C421300345364 /* ServiceKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA2502E1D8C423400345364 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA2502F1D8C423400345364 /* ServiceKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E414955F1D809DC30034630F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,6 +290,60 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DBA24FF41D8C41C200345364 /* ServiceKitWatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBA250051D8C41C200345364 /* Build configuration list for PBXNativeTarget "ServiceKitWatchOS" */;
+			buildPhases = (
+				DBA24FF51D8C41C200345364 /* Sources */,
+				DBA250011D8C41C200345364 /* Frameworks */,
+				DBA250021D8C41C200345364 /* Headers */,
+				DBA250041D8C41C200345364 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ServiceKitWatchOS;
+			productName = ServiceKit;
+			productReference = DBA250081D8C41C200345364 /* ServiceKitWatchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DBA2500A1D8C421300345364 /* ServiceKitTVOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBA2501B1D8C421300345364 /* Build configuration list for PBXNativeTarget "ServiceKitTVOS" */;
+			buildPhases = (
+				DBA2500B1D8C421300345364 /* Sources */,
+				DBA250171D8C421300345364 /* Frameworks */,
+				DBA250181D8C421300345364 /* Headers */,
+				DBA2501A1D8C421300345364 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ServiceKitTVOS;
+			productName = ServiceKit;
+			productReference = DBA2501E1D8C421300345364 /* ServiceKitTVOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DBA250201D8C423400345364 /* ServiceKitMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBA250311D8C423400345364 /* Build configuration list for PBXNativeTarget "ServiceKitMacOS" */;
+			buildPhases = (
+				DBA250211D8C423400345364 /* Sources */,
+				DBA2502D1D8C423400345364 /* Frameworks */,
+				DBA2502E1D8C423400345364 /* Headers */,
+				DBA250301D8C423400345364 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ServiceKitMacOS;
+			productName = ServiceKit;
+			productReference = DBA250341D8C423400345364 /* ServiceKitMacOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		E41495611D809DC30034630F /* ServiceKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E41495761D809DC30034630F /* Build configuration list for PBXNativeTarget "ServiceKit" */;
@@ -258,15 +417,43 @@
 			targets = (
 				E41495611D809DC30034630F /* ServiceKit */,
 				E414956A1D809DC30034630F /* ServiceKitTests */,
+				DBA24FF41D8C41C200345364 /* ServiceKitWatchOS */,
+				DBA2500A1D8C421300345364 /* ServiceKitTVOS */,
+				DBA250201D8C423400345364 /* ServiceKitMacOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DBA250041D8C41C200345364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA2501A1D8C421300345364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA250301D8C423400345364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E41495601D809DC30034630F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA250921D8C437A00345364 /* Info.plist in Resources */,
+				DBA250951D8C437A00345364 /* ServiceKitWatchOS-Info.plist in Resources */,
+				DBA250941D8C437A00345364 /* ServiceKitTVOS-Info.plist in Resources */,
+				DBA250931D8C437A00345364 /* ServiceKitMacOS-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +467,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DBA24FF51D8C41C200345364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA24FF61D8C41C200345364 /* JsonExtensions.swift in Sources */,
+				DBA24FF71D8C41C200345364 /* GETRequestStructs.swift in Sources */,
+				DBA24FF81D8C41C200345364 /* GETRequestObjects.swift in Sources */,
+				DBA24FF91D8C41C200345364 /* NSObjectExtension.swift in Sources */,
+				DBA24FFA1D8C41C200345364 /* Response.swift in Sources */,
+				DBA24FFB1D8C41C200345364 /* StringExtension.swift in Sources */,
+				DBA24FFC1D8C41C200345364 /* POSTRequests.swift in Sources */,
+				DBA24FFD1D8C41C200345364 /* Wrapping.swift in Sources */,
+				DBA24FFE1D8C41C200345364 /* Service.swift in Sources */,
+				DBA24FFF1D8C41C200345364 /* Request.swift in Sources */,
+				DBA250001D8C41C200345364 /* Protocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA2500B1D8C421300345364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA2500C1D8C421300345364 /* JsonExtensions.swift in Sources */,
+				DBA2500D1D8C421300345364 /* GETRequestStructs.swift in Sources */,
+				DBA2500E1D8C421300345364 /* GETRequestObjects.swift in Sources */,
+				DBA2500F1D8C421300345364 /* NSObjectExtension.swift in Sources */,
+				DBA250101D8C421300345364 /* Response.swift in Sources */,
+				DBA250111D8C421300345364 /* StringExtension.swift in Sources */,
+				DBA250121D8C421300345364 /* POSTRequests.swift in Sources */,
+				DBA250131D8C421300345364 /* Wrapping.swift in Sources */,
+				DBA250141D8C421300345364 /* Service.swift in Sources */,
+				DBA250151D8C421300345364 /* Request.swift in Sources */,
+				DBA250161D8C421300345364 /* Protocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA250211D8C423400345364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA250221D8C423400345364 /* JsonExtensions.swift in Sources */,
+				DBA250231D8C423400345364 /* GETRequestStructs.swift in Sources */,
+				DBA250241D8C423400345364 /* GETRequestObjects.swift in Sources */,
+				DBA250251D8C423400345364 /* NSObjectExtension.swift in Sources */,
+				DBA250261D8C423400345364 /* Response.swift in Sources */,
+				DBA250271D8C423400345364 /* StringExtension.swift in Sources */,
+				DBA250281D8C423400345364 /* POSTRequests.swift in Sources */,
+				DBA250291D8C423400345364 /* Wrapping.swift in Sources */,
+				DBA2502A1D8C423400345364 /* Service.swift in Sources */,
+				DBA2502B1D8C423400345364 /* Request.swift in Sources */,
+				DBA2502C1D8C423400345364 /* Protocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E414955D1D809DC30034630F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +560,135 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		DBA250061D8C41C200345364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ServiceKit/Info Plists/ServiceKitWatchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ServiceKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DBA250071D8C41C200345364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ServiceKit/Info Plists/ServiceKitWatchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ServiceKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DBA2501C1D8C421300345364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ServiceKit/Info Plists/ServiceKitTVOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ServiceKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DBA2501D1D8C421300345364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ServiceKit/Info Plists/ServiceKitTVOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ServiceKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DBA250321D8C423400345364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ServiceKit/Info Plists/ServiceKitMacOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ServiceKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DBA250331D8C423400345364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ServiceKit/Info Plists/ServiceKitMacOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ServiceKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		E41495741D809DC30034630F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -428,7 +798,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ServiceKit/Info.plist;
+				INFOPLIST_FILE = "ServiceKit/Info Plists/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ServiceKit;
@@ -449,7 +819,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ServiceKit/Info.plist;
+				INFOPLIST_FILE = "ServiceKit/Info Plists/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ServiceKit;
@@ -493,6 +863,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DBA250051D8C41C200345364 /* Build configuration list for PBXNativeTarget "ServiceKitWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA250061D8C41C200345364 /* Debug */,
+				DBA250071D8C41C200345364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBA2501B1D8C421300345364 /* Build configuration list for PBXNativeTarget "ServiceKitTVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA2501C1D8C421300345364 /* Debug */,
+				DBA2501D1D8C421300345364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBA250311D8C423400345364 /* Build configuration list for PBXNativeTarget "ServiceKitMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA250321D8C423400345364 /* Debug */,
+				DBA250331D8C423400345364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E414955C1D809DC30034630F /* Build configuration list for PBXProject "ServiceKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
