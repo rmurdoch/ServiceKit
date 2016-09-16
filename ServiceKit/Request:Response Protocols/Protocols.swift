@@ -10,13 +10,13 @@ import UIKit
 
 // Read/Write Protocols
 // =====================================
-public protocol JsonWritable {
+public protocol JsonInitializable {
     init(_ json: AnyObject)
     func classNameForArray(_ name: String) -> AnyClass?
 }
 
-public protocol JsonReadable: Wrapping { }
+public protocol JsonRepresentable: Wrapping { }
 
 
-public protocol JsonObject: JsonWritable, JsonReadable { }
+public protocol JsonObject: JsonInitializable, JsonRepresentable { }
 

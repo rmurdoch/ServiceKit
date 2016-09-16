@@ -8,4 +8,4 @@
 
 import UIKit
 
-public protocol Response: JsonWritable { }
+public protocol Response: JsonInitializable { }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension JsonReadable {
+extension JsonRepresentable {
     
     var asJson: AnyObject {
         let mirror = Mirror(reflecting: self)
@@ -19,7 +19,7 @@ extension JsonReadable {
             if (self as! NSObject).responds(to: #selector(getter: NSObject.jsonDictionary)) {
                 return (self as! NSObject).jsonDictionary
             } else {
-                assert(false, "Error: Not JsonReadable Object")
+                assert(false, "Error: Not JsonRepresentable Object")
             }
         } else {
             //MARK: For Structs Wrapping in custom KVC
@@ -57,8 +57,8 @@ extension Wrapping {
         
         var array = [AnyObject]()
         for item in wrapArray {
-            if item is JsonReadable {
-                let wrapItem = (item as! JsonReadable).wrap()
+            if item is JsonRepresentable {
+                let wrapItem = (item as! JsonRepresentable).wrap()
                 array.append(wrapItem as AnyObject)
             } else {
                 array.append(item as AnyObject)
@@ -128,7 +128,7 @@ extension NSArray: Wrapping {
     }
 }
 
-extension JsonReadable where Self: Wrapping {
+extension JsonRepresentable where Self: Wrapping {
     public func wrap() -> AnyObject? {
         return self.asJson
     }

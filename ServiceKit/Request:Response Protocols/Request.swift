@@ -14,7 +14,7 @@ public enum RequestMethod: String {
     case POST, GET, PUT, DELETE
 }
 
-public protocol Request: JsonReadable {
+public protocol Request: JsonRepresentable {
     
     //End point of URL request
     var endPoint: String { get }
@@ -42,9 +42,9 @@ public protocol Request: JsonReadable {
 // =====================================
 
 public protocol GetRequest: Request  { }
-public protocol PostRequest: Request, JsonReadable { }
+public protocol PostRequest: Request, JsonRepresentable { }
 public protocol DeleteRequest: Request { }
-public protocol PutRequest: Request, JsonReadable { }
+public protocol PutRequest: Request, JsonRepresentable { }
 
 extension GetRequest {
     public var method: RequestMethod { return .GET }
@@ -110,9 +110,9 @@ extension Request {
 
 
 
-//Want to generate request based on if Request is JsonReadable. For example POST or PUT
-//// this gives an implementation to request when its a JsonReadable
-extension JsonReadable where Self: Request {
+//Want to generate request based on if Request is JsonRepresentable. For example POST or PUT
+//// this gives an implementation to request when its a JsonRepresentable
+extension JsonRepresentable where Self: Request {
     func generateRequest() -> URLRequest {
         
         var connectRequest = URLRequest(url: self.urlForService, cachePolicy: .useProtocolCachePolicy, timeoutInterval: self.timeout)

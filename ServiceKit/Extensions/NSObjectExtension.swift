@@ -20,7 +20,7 @@ internal extension NSObject {
                 if propertyValue is NSArray {
                     properties.setObject(self.jsonArrayFrom(propertyValue as! NSArray), forKey: propertyKey as NSCopying)
                 }
-                else if propertyValue is JsonReadable {
+                else if propertyValue is JsonRepresentable {
                     properties.setObject((propertyValue as! NSObject).jsonDictionary, forKey: propertyKey as NSCopying)
                 }
                 else {
@@ -42,7 +42,7 @@ internal extension NSObject {
         let jsonArray = NSMutableArray()
         
         for object in array {
-            if object is JsonReadable {
+            if object is JsonRepresentable {
                 jsonArray.add((object as! NSObject).jsonDictionary)
             } else {
                 jsonArray.add(object)
@@ -94,9 +94,9 @@ internal extension NSObject {
         
         for item in array {
             
-            if let classType = (self as? JsonWritable)?.classNameForArray(key) {
+            if let classType = (self as? JsonInitializable)?.classNameForArray(key) {
 
-                if classType is JsonWritable.Type {
+                if classType is JsonInitializable.Type {
                     if let object = self.getObjectFrom(item as! NSDictionary, "\(classType)") {
                         values.add(object)
                     }
@@ -126,7 +126,7 @@ internal extension NSObject {
     private func getObjectFrom(_ dictionary: NSDictionary,_ className: String) -> NSObject? {
         
         if let classObject = NSClassFromString("ServiceKit.\(className)") {
-            if let classType = classObject as? JsonWritable.Type {
+            if let classType = classObject as? JsonInitializable.Type {
                 let jsonObject = classType.init(dictionary)
                 return jsonObject as? NSObject
             }
