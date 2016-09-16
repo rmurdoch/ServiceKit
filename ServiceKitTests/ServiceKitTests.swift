@@ -28,9 +28,9 @@ class ServiceKitTests: XCTestCase {
             GetRequestObject1().send(completion: { (completion) in
                 
                 switch completion {
-                case .Error(let error):
+                case .error(let error):
                     XCTAssertNil(error)
-                case .Success(let response):
+                case .success(let response):
                     let myresponse = response as! GetResponseObject1
                     XCTAssertNotNil(myresponse)
                 }
@@ -48,9 +48,9 @@ class ServiceKitTests: XCTestCase {
             GetRequestStruct1().send(completion: { (completion) in
                 
                 switch completion {
-                case .Error(let error):
+                case .error(let error):
                     XCTAssertNil(error)
-                case .Success(let response):
+                case .success(let response):
                     let myresponse = response as! GetResponseStruct1
                     XCTAssertNotNil(myresponse.items.count)
                 }
@@ -70,9 +70,9 @@ class ServiceKitTests: XCTestCase {
             PostRequestObject1().send(completion: { (completion) in
                 
                 switch completion {
-                case .Error(let error):
+                case .error(let error):
                     XCTAssertNil(error)
-                case .Success(let response):
+                case .success(let response):
                     let myresponse = response as! PostResponseObject1
                     XCTAssertNotNil(myresponse)
                 }

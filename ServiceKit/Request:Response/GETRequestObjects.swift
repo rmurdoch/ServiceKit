@@ -26,9 +26,9 @@ public extension GetRequestObject1 {
     public func sendRequest(completionHandler: @escaping (_ error: NSError?,_ resposne: GetResponseObject1?) -> ()) {
         self.send { (completion) in
             switch completion {
-            case.Error(let error):
+            case.error(let error):
                 completionHandler(error, nil)
-            case .Success(let response):
+            case .success(let response):
                 completionHandler(nil, response as? GetResponseObject1)
             }
         }

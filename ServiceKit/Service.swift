@@ -9,8 +9,8 @@
 import UIKit
 
 public enum ResponseCompletion {
-    case Success(Response)
-    case Error(NSError)
+    case success(Response)
+    case error(NSError)
 }
 
 
@@ -28,16 +28,16 @@ internal final class Service: NSObject {
             
             DispatchQueue.main.async {
                 if let error = responseError {
-                    completion(.Error(error as NSError))
+                    completion(.error(error as NSError))
                 } else if let data = data {
                     if let json = data.json {
                         let response = T.ResponseType(json)
-                        completion(.Success(response))
+                        completion(.success(response))
                     } else {
-                        completion(.Error(self.jsonError))
+                        completion(.error(self.jsonError))
                     }
                 } else {
-                    completion(.Error(self.unknownError))
+                    completion(.error(self.unknownError))
                 }
             }
         }.resume()
