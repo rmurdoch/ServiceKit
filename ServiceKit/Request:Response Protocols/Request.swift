@@ -14,7 +14,7 @@ public enum RequestMethod: String {
     case POST, GET, PUT, DELETE, PATCH
 }
 
-public protocol Request: JsonRepresentable {
+public protocol Request: JSONRepresentable {
     
     //End point of URL request
     var endPoint: String { get }
@@ -42,10 +42,10 @@ public protocol Request: JsonRepresentable {
 // =====================================
 
 public protocol GetRequest: Request  { }
-public protocol PostRequest: Request, JsonRepresentable { }
+public protocol PostRequest: Request, JSONRepresentable { }
 public protocol DeleteRequest: Request { }
-public protocol PutRequest: Request, JsonRepresentable { }
-public protocol PatchRequest: Request, JsonRepresentable { }
+public protocol PutRequest: Request, JSONRepresentable { }
+public protocol PatchRequest: Request, JSONRepresentable { }
 
 extension GetRequest {
     public var method: RequestMethod { return .GET }
@@ -78,7 +78,7 @@ extension Request {
         connectRequest.httpMethod = method.rawValue
         
         
-        if (self.asJson as! NSDictionary).allValues.count > 0 {
+        if (self.asJSON as! NSDictionary).allValues.count > 0 {
             connectRequest.httpBody = self.data
         }
         
@@ -102,8 +102,8 @@ extension Request {
     
     
     internal var data: Data {
-        let dictionary = NSDictionary(dictionary: self.asJson as! NSDictionary)
-        return dictionary.jsonData!
+        let dictionary = NSDictionary(dictionary: self.asJSON as! NSDictionary)
+        return dictionary.JSONData!
     }
     
     public func send(completion: @escaping (_ completion: ResponseCompletion) -> ()) {
@@ -113,9 +113,9 @@ extension Request {
 
 
 
-//Want to generate request based on if Request is JsonRepresentable. For example POST or PUT
-//// this gives an implementation to request when its a JsonRepresentable
-extension JsonRepresentable where Self: Request {
+//Want to generate request based on if Request is JSONRepresentable. For example POST or PUT
+//// this gives an implementation to request when its a JSONRepresentable
+extension JSONRepresentable where Self: Request {
     func generateRequest() -> URLRequest {
         
         var connectRequest = URLRequest(url: self.urlForService, cachePolicy: .useProtocolCachePolicy, timeoutInterval: self.timeout)

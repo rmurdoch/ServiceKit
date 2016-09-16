@@ -8,7 +8,7 @@
 
 import Foundation
 
-//Tests by: https://jsonplaceholder.typicode.com
+//Tests by: https://JSONplaceholder.typicode.com
 
 
 
@@ -30,8 +30,8 @@ public struct GetResponseStruct1: Response {
     public var items: [GetStruct]
     
     //MARK Response Protocols
-    public init(_ json: AnyObject) {
-        self.items = (json as! Array).flatMap{ GetStruct.init($0) }
+    public init(_ JSON: AnyObject) {
+        self.items = (JSON as! Array).flatMap{ GetStruct.init($0) }
     }
     
     public func classNameForArray(_ name: String) -> AnyClass? {
@@ -42,28 +42,28 @@ public struct GetResponseStruct1: Response {
 
 
 //MARK: Get Object Returned for KVC
-public struct GetStruct: JsonObject {
+public struct GetStruct: JSONObject {
     
     var userId: NSNumber!
     var id: NSNumber!
     var title: NSString!
     var body: NSString!
     
-    public init(_ json: AnyObject) {
+    public init(_ JSON: AnyObject) {
 
-        if let userId = json["userId"] {
+        if let userId = JSON["userId"] {
             self.userId = userId as! NSNumber!
         }
         
-        if let id = json["id"] {
+        if let id = JSON["id"] {
             self.id = id as! NSNumber!
         }
         
-        if let title = json["title"] {
+        if let title = JSON["title"] {
             self.title = title as! NSString!
         }
         
-        if let body = json["body"] {
+        if let body = JSON["body"] {
             self.body = body as! NSString!
         }
     }

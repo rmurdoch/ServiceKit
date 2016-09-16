@@ -8,18 +8,18 @@
 
 import Foundation
 
-extension JsonRepresentable {
+extension JSONRepresentable {
     
-    var asJson: AnyObject {
+    var asJSON: AnyObject {
         let mirror = Mirror(reflecting: self)
         var dictionary = [String : AnyObject]()
         
         //MARK: For NSObject classes using KVC
         if mirror.superclassMirror?.subjectType == NSObject.self {
-            if (self as! NSObject).responds(to: #selector(getter: NSObject.jsonDictionary)) {
-                return (self as! NSObject).jsonDictionary
+            if (self as! NSObject).responds(to: #selector(getter: NSObject.JSONDictionary)) {
+                return (self as! NSObject).JSONDictionary
             } else {
-                assert(false, "Error: Not JsonRepresentable Object")
+                assert(false, "Error: Not JSONRepresentable Object")
             }
         } else {
             //MARK: For Structs Wrapping in custom KVC
@@ -57,8 +57,8 @@ extension Wrapping {
         
         var array = [AnyObject]()
         for item in wrapArray {
-            if item is JsonRepresentable {
-                let wrapItem = (item as! JsonRepresentable).wrap()
+            if item is JSONRepresentable {
+                let wrapItem = (item as! JSONRepresentable).wrap()
                 array.append(wrapItem as AnyObject)
             } else {
                 array.append(item as AnyObject)
@@ -128,8 +128,8 @@ extension NSArray: Wrapping {
     }
 }
 
-extension JsonRepresentable where Self: Wrapping {
+extension JSONRepresentable where Self: Wrapping {
     public func wrap() -> AnyObject? {
-        return self.asJson
+        return self.asJSON
     }
 }

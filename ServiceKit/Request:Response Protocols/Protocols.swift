@@ -10,13 +10,13 @@ import Foundation
 
 // Read/Write Protocols
 // =====================================
-public protocol JsonInitializable {
-    init(_ json: AnyObject)
+public protocol JSONInitializable {
+    init(_ JSON: AnyObject)
     func classNameForArray(_ name: String) -> AnyClass?
 }
 
-public protocol JsonRepresentable: Wrapping { }
+public protocol JSONRepresentable: Wrapping { }
 
 
-public protocol JsonObject: JsonInitializable, JsonRepresentable { }
+public protocol JSONObject: JSONInitializable, JSONRepresentable { }
 

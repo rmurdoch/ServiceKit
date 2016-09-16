@@ -11,17 +11,17 @@ import Foundation
 internal extension NSObject {
     
     //MARK: NSObject to Dictionary
-    internal var jsonDictionary: NSDictionary {
+    internal var JSONDictionary: NSDictionary {
         
         let properties = NSMutableDictionary()
         
         for propertyKey in self.propertyNames {
             if let propertyValue = self.value(forKeyPath: propertyKey) {
                 if propertyValue is NSArray {
-                    properties.setObject(self.jsonArrayFrom(propertyValue as! NSArray), forKey: propertyKey as NSCopying)
+                    properties.setObject(self.JSONArrayFrom(propertyValue as! NSArray), forKey: propertyKey as NSCopying)
                 }
-                else if propertyValue is JsonRepresentable {
-                    properties.setObject((propertyValue as! NSObject).jsonDictionary, forKey: propertyKey as NSCopying)
+                else if propertyValue is JSONRepresentable {
+                    properties.setObject((propertyValue as! NSObject).JSONDictionary, forKey: propertyKey as NSCopying)
                 }
                 else {
                     properties.setObject(propertyValue, forKey: propertyKey as NSCopying)
@@ -38,18 +38,18 @@ internal extension NSObject {
         return Mirror(reflecting: self).children.flatMap{ $0.label }
     }
     
-    private func jsonArrayFrom(_ array: NSArray) -> NSArray {
-        let jsonArray = NSMutableArray()
+    private func JSONArrayFrom(_ array: NSArray) -> NSArray {
+        let JSONArray = NSMutableArray()
         
         for object in array {
-            if object is JsonRepresentable {
-                jsonArray.add((object as! NSObject).jsonDictionary)
+            if object is JSONRepresentable {
+                JSONArray.add((object as! NSObject).JSONDictionary)
             } else {
-                jsonArray.add(object)
+                JSONArray.add(object)
             }
         }
         
-        return jsonArray
+        return JSONArray
     }
     
     internal func contains(_ key: String) -> Bool {
@@ -60,9 +60,9 @@ internal extension NSObject {
 
 internal extension NSObject {
     
-    internal func parse(_ json: AnyObject) {
+    internal func parse(_ JSON: AnyObject) {
         
-        if let dictionary = json as? [String : AnyObject]  {
+        if let dictionary = JSON as? [String : AnyObject]  {
             
             for key in dictionary.keys {
                 
@@ -72,7 +72,7 @@ internal extension NSObject {
                         if value is NSNull {
                             self.setValue(nil, forKeyPath: key.lowerCamel)
                         } else if let obj = value as? NSArray {
-                            self.setValue(self.propertiesFromJson(obj, key.lowerCamel), forKeyPath: key.lowerCamel)
+                            self.setValue(self.propertiesFromJSON(obj, key.lowerCamel), forKeyPath: key.lowerCamel)
                         } else if let obj = value as? NSDictionary {
                             self.setValue(self.get(obj, key.lowerCamel), forKeyPath: key.lowerCamel)
                         } else {
@@ -88,15 +88,15 @@ internal extension NSObject {
         }
     }
     
-    internal func propertiesFromJson(_ array: NSArray, _ key : String) -> NSArray {
+    internal func propertiesFromJSON(_ array: NSArray, _ key : String) -> NSArray {
         
         let values = NSMutableArray()
         
         for item in array {
             
-            if let classType = (self as? JsonInitializable)?.classNameForArray(key) {
+            if let classType = (self as? JSONInitializable)?.classNameForArray(key) {
 
-                if classType is JsonInitializable.Type {
+                if classType is JSONInitializable.Type {
                     if let object = self.getObjectFrom(item as! NSDictionary, "\(classType)") {
                         values.add(object)
                     }
@@ -126,9 +126,9 @@ internal extension NSObject {
     private func getObjectFrom(_ dictionary: NSDictionary,_ className: String) -> NSObject? {
         
         if let classObject = NSClassFromString("ServiceKit.\(className)") {
-            if let classType = classObject as? JsonInitializable.Type {
-                let jsonObject = classType.init(dictionary)
-                return jsonObject as? NSObject
+            if let classType = classObject as? JSONInitializable.Type {
+                let JSONObject = classType.init(dictionary)
+                return JSONObject as? NSObject
             }
         }
         

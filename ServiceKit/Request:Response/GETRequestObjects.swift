@@ -41,9 +41,9 @@ public extension GetRequestObject1 {
 //MARK: Get Response 1
 public class GetResponseObject1: NSObject, Response {
     //MARK Response Protocols
-    required public init(_ json: AnyObject) {
+    required public init(_ JSON: AnyObject) {
         super.init()
-        self.parse(json)
+        self.parse(JSON)
     }
     
     public func classNameForArray(_ name: String) -> AnyClass? {
@@ -54,16 +54,16 @@ public class GetResponseObject1: NSObject, Response {
 
 
 //MARK: Get Object Returned for KVC
-public class GetObject: NSObject, JsonObject {
+public class GetObject: NSObject, JSONObject {
     
     var userId: NSNumber!
     var id: NSNumber!
     var title: NSString!
     var body: NSString!
     
-    required public init(_ json: AnyObject) {
+    required public init(_ JSON: AnyObject) {
         super.init()
-        self.parse(json)
+        self.parse(JSON)
     }
     
     public func classNameForArray(_ name: String) -> AnyClass? {

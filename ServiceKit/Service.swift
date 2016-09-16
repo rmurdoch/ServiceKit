@@ -14,11 +14,11 @@ public enum ResponseCompletion {
 }
 
 
-//Tests by: https://jsonplaceholder.typicode.com
+//Tests by: https://JSONplaceholder.typicode.com
 
 internal final class Service: NSObject {
     
-    internal let serverURL = "http://jsonplaceholder.typicode.com"
+    internal let serverURL = "http://JSONplaceholder.typicode.com"
     
     internal static let sharedInstance = Service()
     
@@ -30,11 +30,11 @@ internal final class Service: NSObject {
                 if let error = responseError {
                     completion(.error(error as NSError))
                 } else if let data = data {
-                    if let json = data.json {
-                        let response = T.ResponseType(json)
+                    if let JSON = data.JSON {
+                        let response = T.ResponseType(JSON)
                         completion(.success(response))
                     } else {
-                        completion(.error(self.jsonError))
+                        completion(.error(self.JSONError))
                     }
                 } else {
                     completion(.error(self.unknownError))
@@ -47,7 +47,7 @@ internal final class Service: NSObject {
         return NSError(domain: "UNKNOWN ERROR", code: NSURLErrorUnknown, userInfo: nil)
     }
     
-    private var jsonError: NSError {
+    private var JSONError: NSError {
         return NSError(domain: "JSON ERROR", code: NSURLErrorUnknown, userInfo: nil)
     }
 }

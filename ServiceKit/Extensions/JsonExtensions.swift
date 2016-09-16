@@ -9,7 +9,7 @@
 import Foundation
 
 internal extension NSDictionary {
-    internal var jsonData: Data? {
+    internal var JSONData: Data? {
         do {
             return try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
         } catch {
@@ -21,23 +21,23 @@ internal extension NSDictionary {
 
 
 internal extension Data {
-    internal var json: AnyObject? {
+    internal var JSON: AnyObject? {
         
         do {
-            if let jsonResult = try JSONSerialization.jsonObject(with: self, options: []) as? [String:AnyObject] {
-                return jsonResult as AnyObject
+            if let JSONResult = try JSONSerialization.jsonObject(with: self, options: []) as? [String:AnyObject] {
+                return JSONResult as AnyObject
             }
         }  catch {
-            assert(false, "Error JSONSerialization.jsonObject: \(error)")
+            assert(false, "Error JSONSerialization.JSONObject: \(error)")
         }
         
         
         do {
-            if let jsonResult = try JSONSerialization.jsonObject(with: self, options: []) as? [[String:AnyObject]] {
-                return jsonResult as AnyObject
+            if let JSONResult = try JSONSerialization.jsonObject(with: self, options: []) as? [[String:AnyObject]] {
+                return JSONResult as AnyObject
             }
         }  catch {
-            assert(false, "Error JSONSerialization.jsonObject: \(error)")
+            assert(false, "Error JSONSerialization.JSONObject: \(error)")
         }
         
         return nil

@@ -44,9 +44,9 @@ public class PostResponseObject1: NSObject, Response {
 
     
     //MARK Response Protocols
-    required public init(_ json: AnyObject) {
+    required public init(_ JSON: AnyObject) {
         super.init()
-        self.parse(json)
+        self.parse(JSON)
     }
     
     public func classNameForArray(_ name: String) -> AnyClass? {
