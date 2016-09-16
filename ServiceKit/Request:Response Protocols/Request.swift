@@ -11,7 +11,7 @@ import UIKit
 // Request Protocols
 // =====================================
 public enum RequestMethod: String {
-    case POST, GET, PUT, DELETE
+    case POST, GET, PUT, DELETE, PATCH
 }
 
 public protocol Request: JsonRepresentable {
@@ -45,6 +45,7 @@ public protocol GetRequest: Request  { }
 public protocol PostRequest: Request, JsonRepresentable { }
 public protocol DeleteRequest: Request { }
 public protocol PutRequest: Request, JsonRepresentable { }
+public protocol PatchRequest: Request, JsonRepresentable { }
 
 extension GetRequest {
     public var method: RequestMethod { return .GET }
@@ -62,7 +63,9 @@ extension PutRequest {
     public var method: RequestMethod { return .PUT }
 }
 
-
+extension PatchRequest {
+    public var method: RequestMethod { return .PATCH }
+}
 
 
 // Request Extension Builders
