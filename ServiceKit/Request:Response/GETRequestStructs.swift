@@ -6,7 +6,7 @@
 //  Copyright © 2016 Andrew Murdoch. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 //Tests by: https://jsonplaceholder.typicode.com
 
@@ -34,7 +34,6 @@ public struct GetResponseStruct1: Response {
         self.items = (json as! Array).flatMap{ GetStruct.init($0) }
     }
     
-
     public func classNameForArray(_ name: String) -> AnyClass? {
         return nil
     }

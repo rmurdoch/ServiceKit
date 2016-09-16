@@ -6,7 +6,7 @@
 //  Copyright © 2016 Andrew Murdoch. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for ServiceKit.
 FOUNDATION_EXPORT double ServiceKitVersionNumber;

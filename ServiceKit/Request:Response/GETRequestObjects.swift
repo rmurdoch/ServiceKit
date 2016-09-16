@@ -6,7 +6,7 @@
 //  Copyright © 2016 Andrew Murdoch. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 //MARK: Get Request 1 returning Get Objects
 public class GetRequestObject1: NSObject {

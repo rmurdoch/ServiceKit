@@ -6,6 +6,6 @@
 //  Copyright © 2016 Andrew Murdoch. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public protocol Response: JsonInitializable { }

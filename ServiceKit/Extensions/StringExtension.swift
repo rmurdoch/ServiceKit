@@ -6,7 +6,7 @@
 //  Copyright © 2016 Andrew Murdoch. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 internal extension String {
     var upperCamel: String {

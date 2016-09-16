@@ -6,7 +6,7 @@
 //  Copyright © 2016 Andrew Murdoch. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 //MARK: Post Request 1 returning Post Objects
 public class PostRequestObject1: NSObject { }
