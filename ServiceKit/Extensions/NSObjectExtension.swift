@@ -94,7 +94,11 @@ internal extension NSObject {
         
         for item in array {
             
-            if let classType = (self as? JSONInitializable)?.classNameForArray(key) {
+            guard let className = self.className(key) else {
+                continue
+            }
+            
+            if let classType = NSClassFromString("ServiceKit.\(className)") {
 
                 if classType is JSONInitializable.Type {
                     if let object = self.getObjectFrom(item as! NSDictionary, "\(classType)") {
@@ -148,8 +152,8 @@ internal extension NSObject {
             let components = subjectName.components(separatedBy: "<")
             
             if components.count > 1 {
-                let name = components[1]
-                return name.components(separatedBy: ">").first
+                let name = components.last
+                return name?.components(separatedBy: ">").first
             } else {
                 return subjectName
             }

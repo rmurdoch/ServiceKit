@@ -48,8 +48,4 @@ public class PostResponseObject1: NSObject, Response {
         super.init()
         self.parse(JSON)
     }
-    
-    public func classNameForArray(_ name: String) -> AnyClass? {
-        return nil
-    }
 }

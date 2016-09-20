@@ -33,10 +33,6 @@ public struct GetResponseStruct1: Response {
     public init(_ JSON: AnyObject) {
         self.items = (JSON as! Array).flatMap{ GetStruct.init($0) }
     }
-    
-    public func classNameForArray(_ name: String) -> AnyClass? {
-        return nil
-    }
 }
 
 
@@ -66,10 +62,5 @@ public struct GetStruct: JSONObject {
         if let body = JSON["body"] {
             self.body = body as! NSString!
         }
-    }
-    
-    
-    public func classNameForArray(_ name: String) -> AnyClass? {
-        return nil
     }
 }

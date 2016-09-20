@@ -12,7 +12,6 @@ import Foundation
 // =====================================
 public protocol JSONInitializable {
     init(_ JSON: AnyObject)
-    func classNameForArray(_ name: String) -> AnyClass?
 }
 
 public protocol JSONRepresentable: Wrapping { }

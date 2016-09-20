@@ -45,10 +45,6 @@ public class GetResponseObject1: NSObject, Response {
         super.init()
         self.parse(JSON)
     }
-    
-    public func classNameForArray(_ name: String) -> AnyClass? {
-        return GetObject.classForCoder()
-    }
 }
 
 
@@ -64,9 +60,5 @@ public class GetObject: NSObject, JSONObject {
     required public init(_ JSON: AnyObject) {
         super.init()
         self.parse(JSON)
-    }
-    
-    public func classNameForArray(_ name: String) -> AnyClass? {
-        return nil
     }
 }
