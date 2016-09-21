@@ -63,6 +63,10 @@
 		E41495811D80A03F0034630F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41495801D80A03F0034630F /* Service.swift */; };
 		E414958F1D80AE840034630F /* XCTestCase+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = E414958E1D80AE840034630F /* XCTestCase+Async.m */; };
 		E41DF12D1D8AFF1F00BC7EDF /* ServiceObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DF12C1D8AFF1F00BC7EDF /* ServiceObjCTests.m */; };
+		E42D134A1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */; };
+		E42D134B1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */; };
+		E42D134C1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */; };
+		E42D134D1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +108,7 @@
 		E414958E1D80AE840034630F /* XCTestCase+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+Async.m"; sourceTree = "<group>"; };
 		E41DF12B1D8AFF1F00BC7EDF /* ServiceObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceObjCTests.h; sourceTree = "<group>"; };
 		E41DF12C1D8AFF1F00BC7EDF /* ServiceObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceObjCTests.m; sourceTree = "<group>"; };
+		E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +252,7 @@
 				DBFD1F051D8B5C1F003268EE /* Protocols.swift */,
 				DBFD1F061D8B5C1F003268EE /* Request.swift */,
 				DBFD1F071D8B5C1F003268EE /* Response.swift */,
+				E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */,
 				DBFD1F081D8B5C1F003268EE /* Wrapping.swift */,
 			);
 			name = "Service Protocols";
@@ -481,6 +487,7 @@
 				DBA24FFD1D8C41C200345364 /* Wrapping.swift in Sources */,
 				DBA24FFE1D8C41C200345364 /* Service.swift in Sources */,
 				DBA24FFF1D8C41C200345364 /* Request.swift in Sources */,
+				E42D134B1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */,
 				DBA250001D8C41C200345364 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +506,7 @@
 				DBA250131D8C421300345364 /* Wrapping.swift in Sources */,
 				DBA250141D8C421300345364 /* Service.swift in Sources */,
 				DBA250151D8C421300345364 /* Request.swift in Sources */,
+				E42D134C1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */,
 				DBA250161D8C421300345364 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +525,7 @@
 				DBA250291D8C423400345364 /* Wrapping.swift in Sources */,
 				DBA2502A1D8C423400345364 /* Service.swift in Sources */,
 				DBA2502B1D8C423400345364 /* Request.swift in Sources */,
+				E42D134D1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */,
 				DBA2502C1D8C423400345364 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +544,7 @@
 				DBFD1F0C1D8B5C1F003268EE /* Wrapping.swift in Sources */,
 				E41495811D80A03F0034630F /* Service.swift in Sources */,
 				DBFD1F0A1D8B5C1F003268EE /* Request.swift in Sources */,
+				E42D134A1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */,
 				DBFD1F091D8B5C1F003268EE /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
