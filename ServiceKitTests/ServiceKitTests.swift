@@ -41,52 +41,52 @@ class ServiceKitTests: XCTestCase {
     
     
 //MARK: Test Get Request Struct1
-    func testGetRequestStructt1() {
-        
-        self.executeAsyncBlock { (stop) in
-            
-            GetRequestStruct1().send(completion: { (completion) in
-                
-                switch completion {
-                case .error(let error):
-                    XCTAssertNil(error)
-                case .success(let response):
-                    let myresponse = response as! GetResponseStruct1
-                    XCTAssertNotNil(myresponse.items.count)
-                }
-                stop!()
-            })
-        }
-    }
+//    func testGetRequestStructt1() {
+//        
+//        self.executeAsyncBlock { (stop) in
+//            
+//            GetRequestStruct1().send(completion: { (completion) in
+//                
+//                switch completion {
+//                case .error(let error):
+//                    XCTAssertNil(error)
+//                case .success(let response):
+//                    let myresponse = response as! GetResponseStruct1
+//                    XCTAssertNotNil(myresponse.items.count)
+//                }
+//                stop!()
+//            })
+//        }
+//    }
     
     
     
     
 //MARK: Test Post Request Struct1
-    func testPostRequestStructt1() {
-        
-        self.executeAsyncBlock { (stop) in
-            
-            PostRequestObject1().send(completion: { (completion) in
-                
-                switch completion {
-                case .error(let error):
-                    XCTAssertNil(error)
-                case .success(let response):
-                    let myresponse = response as! PostResponseObject1
-                    XCTAssertNotNil(myresponse)
-                }
-                stop!()
-            })
-        }
-    }
-    
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+//    func testPostRequestStructt1() {
+//        
+//        self.executeAsyncBlock { (stop) in
+//            
+//            PostRequestObject1().send(completion: { (completion) in
+//                
+//                switch completion {
+//                case .error(let error):
+//                    XCTAssertNil(error)
+//                case .success(let response):
+//                    let myresponse = response as! PostResponseObject1
+//                    XCTAssertNotNil(myresponse)
+//                }
+//                stop!()
+//            })
+//        }
+//    }
+//    
+//    
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
     
 }

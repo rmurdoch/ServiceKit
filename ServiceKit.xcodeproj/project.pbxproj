@@ -67,6 +67,12 @@
 		E42D134B1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */; };
 		E42D134C1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */; };
 		E42D134D1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */; };
+		E44C2F9E1DD65D87004F4C8D /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44C2F9D1DD65D87004F4C8D /* ResponseHeader.swift */; };
+		E44C2F9F1DD65D87004F4C8D /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44C2F9D1DD65D87004F4C8D /* ResponseHeader.swift */; };
+		E44C2FA01DD65D87004F4C8D /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44C2F9D1DD65D87004F4C8D /* ResponseHeader.swift */; };
+		E44C2FA11DD65D87004F4C8D /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44C2F9D1DD65D87004F4C8D /* ResponseHeader.swift */; };
+		E48038321DD649F9003BCAAB /* ConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48038311DD649F9003BCAAB /* ConnectService.swift */; };
+		E48038371DD650DD003BCAAB /* CoreServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48038361DD650DD003BCAAB /* CoreServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +115,10 @@
 		E41DF12B1D8AFF1F00BC7EDF /* ServiceObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceObjCTests.h; sourceTree = "<group>"; };
 		E41DF12C1D8AFF1F00BC7EDF /* ServiceObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceObjCTests.m; sourceTree = "<group>"; };
 		E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodes.swift; sourceTree = "<group>"; };
+		E44C2F9A1DD6550F004F4C8D /* Utilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Utilities.framework; path = Frameworks/Utilities.framework; sourceTree = "<group>"; };
+		E44C2F9D1DD65D87004F4C8D /* ResponseHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHeader.swift; sourceTree = "<group>"; };
+		E48038311DD649F9003BCAAB /* ConnectService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectService.swift; path = "Request:Response/Core/ConnectService.swift"; sourceTree = "<group>"; };
+		E48038361DD650DD003BCAAB /* CoreServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +178,7 @@
 				E41495641D809DC30034630F /* ServiceKit */,
 				E414956F1D809DC30034630F /* ServiceKitTests */,
 				E41495631D809DC30034630F /* Products */,
+				E44C2F991DD6550F004F4C8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				E41495651D809DC30034630F /* ServiceKit.h */,
+				E41495801D80A03F0034630F /* Service.swift */,
 				E4F11E6F1D81DFF3001F9E25 /* Service Protocols */,
 				E48059141D86FCD6000FD0DB /* Request/Response */,
 				E475D2DD1D834F2C00A2A4DD /* Extensions */,
@@ -199,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				E41495701D809DC30034630F /* ServiceKitTests.swift */,
+				E48038361DD650DD003BCAAB /* CoreServiceTests.swift */,
 				E41DF12B1D8AFF1F00BC7EDF /* ServiceObjCTests.h */,
 				E41DF12C1D8AFF1F00BC7EDF /* ServiceObjCTests.m */,
 				E414958D1D80AE840034630F /* XCTestCase+Async.h */,
@@ -226,6 +239,14 @@
 			name = POST;
 			sourceTree = "<group>";
 		};
+		E44C2F991DD6550F004F4C8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E44C2F9A1DD6550F004F4C8D /* Utilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E475D2DD1D834F2C00A2A4DD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,9 +257,18 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		E480382E1DD649AB003BCAAB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E48038311DD649F9003BCAAB /* ConnectService.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		E48059141D86FCD6000FD0DB /* Request/Response */ = {
 			isa = PBXGroup;
 			children = (
+				E480382E1DD649AB003BCAAB /* Core */,
 				E41DF1301D8B05C900BC7EDF /* GET */,
 				E41DF1331D8B05D900BC7EDF /* POST */,
 			);
@@ -248,10 +278,10 @@
 		E4F11E6F1D81DFF3001F9E25 /* Service Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				E41495801D80A03F0034630F /* Service.swift */,
 				DBFD1F051D8B5C1F003268EE /* Protocols.swift */,
 				DBFD1F061D8B5C1F003268EE /* Request.swift */,
 				DBFD1F071D8B5C1F003268EE /* Response.swift */,
+				E44C2F9D1DD65D87004F4C8D /* ResponseHeader.swift */,
 				E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */,
 				DBFD1F081D8B5C1F003268EE /* Wrapping.swift */,
 			);
@@ -481,6 +511,7 @@
 				DBA24FF71D8C41C200345364 /* GETRequestStructs.swift in Sources */,
 				DBA24FF81D8C41C200345364 /* GETRequestObjects.swift in Sources */,
 				DBA24FF91D8C41C200345364 /* NSObjectExtension.swift in Sources */,
+				E44C2F9F1DD65D87004F4C8D /* ResponseHeader.swift in Sources */,
 				DBA24FFA1D8C41C200345364 /* Response.swift in Sources */,
 				DBA24FFB1D8C41C200345364 /* StringExtension.swift in Sources */,
 				DBA24FFC1D8C41C200345364 /* POSTRequests.swift in Sources */,
@@ -500,6 +531,7 @@
 				DBA2500D1D8C421300345364 /* GETRequestStructs.swift in Sources */,
 				DBA2500E1D8C421300345364 /* GETRequestObjects.swift in Sources */,
 				DBA2500F1D8C421300345364 /* NSObjectExtension.swift in Sources */,
+				E44C2FA01DD65D87004F4C8D /* ResponseHeader.swift in Sources */,
 				DBA250101D8C421300345364 /* Response.swift in Sources */,
 				DBA250111D8C421300345364 /* StringExtension.swift in Sources */,
 				DBA250121D8C421300345364 /* POSTRequests.swift in Sources */,
@@ -519,6 +551,7 @@
 				DBA250231D8C423400345364 /* GETRequestStructs.swift in Sources */,
 				DBA250241D8C423400345364 /* GETRequestObjects.swift in Sources */,
 				DBA250251D8C423400345364 /* NSObjectExtension.swift in Sources */,
+				E44C2FA11DD65D87004F4C8D /* ResponseHeader.swift in Sources */,
 				DBA250261D8C423400345364 /* Response.swift in Sources */,
 				DBA250271D8C423400345364 /* StringExtension.swift in Sources */,
 				DBA250281D8C423400345364 /* POSTRequests.swift in Sources */,
@@ -538,12 +571,14 @@
 				DBFD1F031D8B5C09003268EE /* GETRequestStructs.swift in Sources */,
 				DBFD1F021D8B5C09003268EE /* GETRequestObjects.swift in Sources */,
 				DBFD1EFE1D8B5BF7003268EE /* NSObjectExtension.swift in Sources */,
+				E48038321DD649F9003BCAAB /* ConnectService.swift in Sources */,
 				DBFD1F0B1D8B5C1F003268EE /* Response.swift in Sources */,
 				E401591B1D873427002FC58A /* StringExtension.swift in Sources */,
 				DBFD1F041D8B5C09003268EE /* POSTRequests.swift in Sources */,
 				DBFD1F0C1D8B5C1F003268EE /* Wrapping.swift in Sources */,
 				E41495811D80A03F0034630F /* Service.swift in Sources */,
 				DBFD1F0A1D8B5C1F003268EE /* Request.swift in Sources */,
+				E44C2F9E1DD65D87004F4C8D /* ResponseHeader.swift in Sources */,
 				E42D134A1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */,
 				DBFD1F091D8B5C1F003268EE /* Protocols.swift in Sources */,
 			);
@@ -555,6 +590,7 @@
 			files = (
 				E41495711D809DC30034630F /* ServiceKitTests.swift in Sources */,
 				E41DF12D1D8AFF1F00BC7EDF /* ServiceObjCTests.m in Sources */,
+				E48038371DD650DD003BCAAB /* CoreServiceTests.swift in Sources */,
 				E414958F1D80AE840034630F /* XCTestCase+Async.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -808,6 +844,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "ServiceKit/Info Plists/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -829,6 +869,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "ServiceKit/Info Plists/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

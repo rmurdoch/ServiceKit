@@ -18,11 +18,11 @@ public enum ResponseCompletion {
 
 internal final class Service: NSObject {
     
-    internal let serverURL = "http://JSONplaceholder.typicode.com"
+    let serverURL = "http://10.120.240.181:8001"
     
-    internal static let sharedInstance = Service()
+    static let sharedInstance = Service()
     
-    internal func send<T:Request>(_ request:T, completion: @escaping (ResponseCompletion) -> ()) {
+    func send<T:Request>(_ request:T, completion: @escaping (ResponseCompletion) -> ()) {
         
         URLSession.shared.dataTask(with: request.generateRequest()) { (data, response, responseError) -> Void in
             
@@ -31,6 +31,7 @@ internal final class Service: NSObject {
                     completion(.error(error as NSError))
                 } else if let data = data {
                     if let JSON = data.JSON {
+                        
                         let response = T.ResponseType(JSON)
                         completion(.success(response))
                     } else {

@@ -89,7 +89,14 @@ extension Request {
     }
     
     //MARK: Headers for allHTTPHeaderFields: Below is blank for override
-    public var headers: [String: String] { return [:] }
+    public var headers: [String: String] {
+        
+        return ["Content-Type":"application/json",
+                "Accept":"text/html",
+                "Cache-Control":"no-cache",
+                "Pragma":"no-cache",
+                "Connection":"close"]
+    }
     
     internal var urlForService: URL {
         let urlString = "\(Service.sharedInstance.serverURL)" + "\(self.endPoint)"

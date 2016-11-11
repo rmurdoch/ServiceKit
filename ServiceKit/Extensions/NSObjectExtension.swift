@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+//MARK: Request Parsing
 internal extension NSObject {
     
     //MARK: NSObject to Dictionary
@@ -18,16 +20,16 @@ internal extension NSObject {
         for propertyKey in self.propertyNames {
             if let propertyValue = self.value(forKeyPath: propertyKey) {
                 if propertyValue is NSArray {
-                    properties.setObject(self.JSONArrayFrom(propertyValue as! NSArray), forKey: propertyKey as NSCopying)
+                    properties.setObject(self.JSONArrayFrom(propertyValue as! NSArray), forKey: propertyKey.upperCamel as NSCopying)
                 }
                 else if propertyValue is JSONRepresentable {
-                    properties.setObject((propertyValue as! NSObject).JSONDictionary, forKey: propertyKey as NSCopying)
+                    properties.setObject((propertyValue as! NSObject).JSONDictionary, forKey: propertyKey.upperCamel as NSCopying)
                 }
                 else {
-                    properties.setObject(propertyValue, forKey: propertyKey as NSCopying)
+                    properties.setObject(propertyValue, forKey: propertyKey.upperCamel as NSCopying)
                 }
             } else {
-                assert(false, "Error: No Value for Object")
+//                assert(false, "Error: No Value for Object")
             }
         }
         
@@ -35,7 +37,14 @@ internal extension NSObject {
     }
     
     private var propertyNames: [String] {
-        return Mirror(reflecting: self).children.flatMap{ $0.label }
+        let mirror = Mirror(reflecting: self)
+        var original = mirror.children.flatMap{ $0.label }
+        
+        if let parent = mirror.superclassMirror {
+            original.append(contentsOf: parent.children.flatMap{ $0.label })
+        }
+        
+        return original
     }
     
     private func JSONArrayFrom(_ array: NSArray) -> NSArray {
@@ -58,6 +67,7 @@ internal extension NSObject {
 }
 
 
+//MARK: Response Parsing
 internal extension NSObject {
     
     internal func parse(_ JSON: AnyObject) {

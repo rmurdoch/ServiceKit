@@ -38,14 +38,7 @@ public extension PostRequestObject1 {
 
 
 //MARK: Post Response 1
-public class PostResponseObject1: NSObject, Response {
+public class PostResponseObject1: Response {
     
     var id: NSNumber!
-
-    
-    //MARK Response Protocols
-    required public init(_ JSON: AnyObject) {
-        super.init()
-        self.parse(JSON)
-    }
 }

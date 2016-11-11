@@ -13,27 +13,27 @@ import Foundation
 
 
 //MARK: Get Request 1 returning Get Objects
-public struct GetRequestStruct1 { }
-
-extension GetRequestStruct1: GetRequest {
-    public var endPoint: String {
-        return "/posts"
-    }
-    
-    public typealias ResponseType = GetResponseStruct1
-}
+//public struct GetRequestStruct1 { }
+//
+//extension GetRequestStruct1: GetRequest {
+//    public var endPoint: String {
+//        return "/posts"
+//    }
+//    
+//    public typealias ResponseType = GetResponseStruct1
+//}
 
 
 //MARK: Get Response 1
-public struct GetResponseStruct1: Response {
-    
-    public var items: [GetStruct]
-    
-    //MARK Response Protocols
-    public init(_ JSON: AnyObject) {
-        self.items = (JSON as! Array).flatMap{ GetStruct.init($0) }
-    }
-}
+//public struct GetResponseStruct1: Response {
+//    
+//    public var items: [GetStruct]
+//    
+//    //MARK Response Protocols
+//    public init(_ JSON: AnyObject) {
+//        self.items = (JSON as! Array).flatMap{ GetStruct.init($0) }
+//    }
+//}
 
 
 

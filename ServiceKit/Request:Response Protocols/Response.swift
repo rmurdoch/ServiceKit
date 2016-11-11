@@ -8,4 +8,14 @@
 
 import Foundation
 
-public protocol Response: JSONInitializable { }
+//public protocol Response: JSONInitializable { }
+
+public class Response: NSObject, JSONInitializable {
+    
+    var responseHeader: ResponseHeader!
+    
+    public required init(_ JSON: AnyObject) {
+        super.init()
+        self.parse(JSON)
+    }
+}

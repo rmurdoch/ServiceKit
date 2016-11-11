@@ -39,12 +39,7 @@ public extension GetRequestObject1 {
 
 
 //MARK: Get Response 1
-public class GetResponseObject1: NSObject, Response {
-    //MARK Response Protocols
-    required public init(_ JSON: AnyObject) {
-        super.init()
-        self.parse(JSON)
-    }
+public class GetResponseObject1: Response {
 }
 
 
