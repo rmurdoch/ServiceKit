@@ -53,6 +53,6 @@ public class ConnectResponse: Response {
     var isRegistered: NSNumber?
     var serviceAddress: String?
     var guestName: String?
-    var languagesSupported: NSArray?
+    var languagesSupported: [NSString]?
     var guestExtension: String?
 }

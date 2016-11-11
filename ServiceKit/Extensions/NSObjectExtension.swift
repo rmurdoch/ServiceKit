@@ -114,10 +114,14 @@ internal extension NSObject {
                     if let object = self.getObjectFrom(item as! NSDictionary, "\(classType)") {
                         values.add(object)
                     }
-                } else if classType is NSNumber.Type || classType is NSString.Type || classType is String.Type {
+                }
+            } else if let classType = NSClassFromString(className) {
+                
+                if classType is NSNumber.Type || classType is NSString.Type || classType is String.Type {
                     values.add(item)
                 }
-            } else {
+            }
+            else {
                 assert(false, "Error: No Array Class is Defined")
             }
         }
