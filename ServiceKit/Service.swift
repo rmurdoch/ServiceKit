@@ -24,7 +24,7 @@ internal final class Service: NSObject {
     
     func send<T:Request>(_ request:T, completion: @escaping (ResponseCompletion) -> ()) {
         
-        URLSession.shared.dataTask(with: request.generateRequest()) { (data, response, responseError) -> Void in
+        URLSession.shared.dataTask(with: request.generateRequest()) { (data, urlResponse, responseError) -> Void in
             
             DispatchQueue.main.async {
                 if let error = responseError {
@@ -33,7 +33,16 @@ internal final class Service: NSObject {
                     if let JSON = data.JSON {
                         
                         let response = T.ResponseType(JSON)
-                        completion(.success(response))
+                        
+                        if let isSuccess = response.responseHeader.isSuccess {
+                            if isSuccess.boolValue {
+                                completion(.success(response))
+                            } else {
+                                completion(.error(self.responseHeaderError(response.responseHeader)))
+                            }
+                        } else {
+                            completion(.success(response))
+                        }
                     } else {
                         completion(.error(self.JSONError))
                     }
@@ -50,5 +59,9 @@ internal final class Service: NSObject {
     
     private var JSONError: NSError {
         return NSError(domain: "JSON ERROR", code: NSURLErrorUnknown, userInfo: nil)
+    }
+    
+    private func responseHeaderError(_ header: ResponseHeader) -> NSError {
+        return NSError(domain: header.errorDescription!, code: Int(header.errorCode!), userInfo: nil)
     }
 }

@@ -158,7 +158,14 @@ internal extension NSObject {
     private func className(_ key : String) -> String? {
         
         let mirror = Mirror(reflecting: self)
-        let child = mirror.children.filter{ $0.label == key }.first
+        var child = mirror.children.filter{ $0.label == key }.first
+        
+        if child == nil {
+            if let parent = mirror.superclassMirror {
+                child = parent.children.filter{ $0.label == key }.first
+            }
+        }
+        
         if let child = child {
             let childMirror = Mirror.init(reflecting: child.value)
             let subjectName = "\(childMirror.subjectType)"
