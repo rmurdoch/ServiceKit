@@ -7,7 +7,12 @@
 //
 
 
-public class ResponseHeader: NSObject {
+public class ResponseHeader: NSObject, JSONInitializable {
+    
+    public required init(_ JSON: AnyObject) {
+        super.init()
+        self.parse(JSON)
+    }
     
     var isSuccess:          NSNumber?
     var errorDescription:   String?
