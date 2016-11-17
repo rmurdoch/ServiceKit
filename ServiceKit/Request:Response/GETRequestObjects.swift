@@ -45,15 +45,10 @@ public class GetResponseObject1: Response {
 
 
 //MARK: Get Object Returned for KVC
-public class GetObject: NSObject, JSONObject {
+public class GetObject: JSONObject {
     
     var userId: NSNumber!
     var id: NSNumber!
     var title: NSString!
     var body: NSString!
-    
-    required public init(_ JSON: AnyObject) {
-        super.init()
-        self.parse(JSON)
-    }
 }

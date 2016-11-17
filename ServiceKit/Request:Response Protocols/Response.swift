@@ -10,12 +10,6 @@ import Foundation
 
 //public protocol Response: JSONInitializable { }
 
-public class Response: NSObject, JSONInitializable {
-    
+public class Response: JSONObject {
     var responseHeader: ResponseHeader!
-    
-    public required init(_ JSON: AnyObject) {
-        super.init()
-        self.parse(JSON)
-    }
 }

@@ -38,29 +38,29 @@ import Foundation
 
 
 //MARK: Get Object Returned for KVC
-public struct GetStruct: JSONObject {
-    
-    var userId: NSNumber!
-    var id: NSNumber!
-    var title: NSString!
-    var body: NSString!
-    
-    public init(_ JSON: AnyObject) {
-
-        if let userId = JSON["userId"] {
-            self.userId = userId as! NSNumber!
-        }
-        
-        if let id = JSON["id"] {
-            self.id = id as! NSNumber!
-        }
-        
-        if let title = JSON["title"] {
-            self.title = title as! NSString!
-        }
-        
-        if let body = JSON["body"] {
-            self.body = body as! NSString!
-        }
-    }
-}
+//public struct GetStruct: JSONObject {
+//    
+//    var userId: NSNumber!
+//    var id: NSNumber!
+//    var title: NSString!
+//    var body: NSString!
+//    
+//    public init(_ JSON: AnyObject) {
+//
+//        if let userId = JSON["userId"] {
+//            self.userId = userId as! NSNumber!
+//        }
+//        
+//        if let id = JSON["id"] {
+//            self.id = id as! NSNumber!
+//        }
+//        
+//        if let title = JSON["title"] {
+//            self.title = title as! NSString!
+//        }
+//        
+//        if let body = JSON["body"] {
+//            self.body = body as! NSString!
+//        }
+//    }
+//}

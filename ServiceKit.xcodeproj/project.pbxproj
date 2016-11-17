@@ -67,6 +67,8 @@
 		E42D134B1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */; };
 		E42D134C1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */; };
 		E42D134D1D92CE8500253E05 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */; };
+		E44BBB381DDDF33400580764 /* GetContactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44BBB371DDDF33400580764 /* GetContactsService.swift */; };
+		E44BBB3A1DDDF37C00580764 /* GuestProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44BBB391DDDF37C00580764 /* GuestProfile.swift */; };
 		E44C2F9E1DD65D87004F4C8D /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44C2F9D1DD65D87004F4C8D /* ResponseHeader.swift */; };
 		E44C2F9F1DD65D87004F4C8D /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44C2F9D1DD65D87004F4C8D /* ResponseHeader.swift */; };
 		E44C2FA01DD65D87004F4C8D /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44C2F9D1DD65D87004F4C8D /* ResponseHeader.swift */; };
@@ -115,6 +117,8 @@
 		E41DF12B1D8AFF1F00BC7EDF /* ServiceObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceObjCTests.h; sourceTree = "<group>"; };
 		E41DF12C1D8AFF1F00BC7EDF /* ServiceObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceObjCTests.m; sourceTree = "<group>"; };
 		E42D13491D92CE8500253E05 /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodes.swift; sourceTree = "<group>"; };
+		E44BBB371DDDF33400580764 /* GetContactsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetContactsService.swift; sourceTree = "<group>"; };
+		E44BBB391DDDF37C00580764 /* GuestProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestProfile.swift; sourceTree = "<group>"; };
 		E44C2F9A1DD6550F004F4C8D /* Utilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Utilities.framework; path = Frameworks/Utilities.framework; sourceTree = "<group>"; };
 		E44C2F9D1DD65D87004F4C8D /* ResponseHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHeader.swift; sourceTree = "<group>"; };
 		E48038311DD649F9003BCAAB /* ConnectService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectService.swift; path = "Request:Response/Core/ConnectService.swift"; sourceTree = "<group>"; };
@@ -261,6 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				E48038311DD649F9003BCAAB /* ConnectService.swift */,
+				E44BBB371DDDF33400580764 /* GetContactsService.swift */,
+				E44BBB391DDDF37C00580764 /* GuestProfile.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -572,6 +578,8 @@
 				DBFD1F021D8B5C09003268EE /* GETRequestObjects.swift in Sources */,
 				DBFD1EFE1D8B5BF7003268EE /* NSObjectExtension.swift in Sources */,
 				E48038321DD649F9003BCAAB /* ConnectService.swift in Sources */,
+				E44BBB381DDDF33400580764 /* GetContactsService.swift in Sources */,
+				E44BBB3A1DDDF37C00580764 /* GuestProfile.swift in Sources */,
 				DBFD1F0B1D8B5C1F003268EE /* Response.swift in Sources */,
 				E401591B1D873427002FC58A /* StringExtension.swift in Sources */,
 				DBFD1F041D8B5C09003268EE /* POSTRequests.swift in Sources */,

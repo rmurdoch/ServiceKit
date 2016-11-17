@@ -17,5 +17,10 @@ public protocol JSONInitializable {
 public protocol JSONRepresentable: Wrapping { }
 
 
-public protocol JSONObject: JSONInitializable, JSONRepresentable { }
+public class JSONObject: NSObject, JSONInitializable, JSONRepresentable {
+    public required init(_ JSON: AnyObject) {
+        super.init()
+        self.parse(JSON)
+    }
+}
 

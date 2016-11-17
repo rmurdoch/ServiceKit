@@ -48,4 +48,20 @@ class CoreServiceTests: XCTestCase {
             })
         }
     }
+    
+    func testGetContacts() {
+        self.executeAsyncBlock { (stop) in
+            
+            GetContactRequest().send(completion: { (completion) in
+                switch completion {
+                case .error(let error):
+                    XCTAssertNil(error)
+                case .success(let response):
+                    let myresponse = response as! ConnectResponse
+                    XCTAssertNotNil(myresponse)
+                }
+            })
+            stop!()
+        }
+    }
 }
