@@ -17,6 +17,10 @@ public class ConnectRequest: NSObject, PostRequest {
     }
     
     public typealias ResponseType = ConnectResponse
+    
+    public var requiresRequestHeader: Bool {
+        return false
+    }
 }
 
 

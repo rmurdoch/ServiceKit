@@ -31,9 +31,16 @@ public protocol Request: JSONRepresentable {
     //Creating URLREquest
     func generateRequest() -> URLRequest
     
-    
+    var requiresRequestHeader: Bool { get }
+
     //Response Type from Request
     associatedtype ResponseType: Response
+}
+
+extension Request {
+    public var requiresRequestHeader: Bool {
+        return true
+    }
 }
 
 
@@ -77,7 +84,7 @@ extension Request {
         var connectRequest = URLRequest(url: self.urlForService, cachePolicy: .useProtocolCachePolicy, timeoutInterval: self.timeout)
         connectRequest.httpMethod = method.rawValue
         
-        if (self.asJSON as! NSDictionary).allValues.count > 0 {
+        if (self.asJSON as! NSDictionary).allValues.count > 0 || self.requiresRequestHeader {
             connectRequest.httpBody = self.data
         }
         
@@ -109,6 +116,11 @@ extension Request {
     
     internal var data: Data {
         let dictionary = NSDictionary(dictionary: self.asJSON as! NSDictionary)
+        if self.requiresRequestHeader {
+            
+            print("requiresRequestHeader")
+        }
+        
         return dictionary.JSONData!
     }
     
