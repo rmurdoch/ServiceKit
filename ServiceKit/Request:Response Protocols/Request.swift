@@ -82,7 +82,8 @@ extension Request {
     public func generateRequest() -> URLRequest {
         
         var connectRequest = URLRequest(url: self.urlForService, cachePolicy: .useProtocolCachePolicy, timeoutInterval: self.timeout)
-        connectRequest.httpMethod = method.rawValue
+
+        connectRequest.httpMethod = method.rawValue 
         
         if (self.asJSON as! NSDictionary).allValues.count > 0 || self.requiresRequestHeader {
             connectRequest.httpBody = self.data
@@ -98,11 +99,11 @@ extension Request {
     //MARK: Headers for allHTTPHeaderFields: Below is blank for override
     public var headers: [String: String] {
         
-        return ["Content-Type":"application/json",
-                "Accept":"text/html",
-                "Cache-Control":"no-cache",
-                "Pragma":"no-cache",
-                "Connection":"close"]
+        return ["Accept"        : "text/html",
+                "Cache-Control" : "no-cache",
+                "Connection"    : "close",
+                "Content-Type"  : "application/json",
+                "Pragma"        : "no-cache"]
     }
     
     internal var urlForService: URL {
@@ -111,17 +112,18 @@ extension Request {
     }
     
     public var timeout: TimeInterval {
-        return 10
+        return 20
     }
     
     internal var data: Data {
-        let dictionary = NSDictionary(dictionary: self.asJSON as! NSDictionary)
+        var dictionary = self.asJSON as! [String : AnyObject]
+        
         if self.requiresRequestHeader {
-            
-            print("requiresRequestHeader")
+            let requestHeader = RequestHeader.init(["":"" as AnyObject])
+            dictionary["RequestHeader"] = requestHeader.asJSON
         }
         
-        return dictionary.JSONData!
+        return (dictionary as NSDictionary).JSONData!
     }
     
     public func send(completion: @escaping (_ completion: ResponseCompletion) -> ()) {

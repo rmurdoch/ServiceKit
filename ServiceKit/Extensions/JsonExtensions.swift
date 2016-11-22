@@ -28,7 +28,7 @@ internal extension Data {
                 return JSONResult as AnyObject
             }
         }  catch {
-            assert(false, "Error JSONSerialization.JSONObject: \(error)")
+//            assert(false, "Error JSONSerialization.JSONObject: \(error)")
         }
         
         
@@ -37,7 +37,7 @@ internal extension Data {
                 return JSONResult as AnyObject
             }
         }  catch {
-            assert(false, "Error JSONSerialization.JSONObject: \(error)")
+//            assert(false, "Error JSONSerialization.JSONObject: \(error)")
         }
         
         return nil

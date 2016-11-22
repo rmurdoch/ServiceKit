@@ -13,7 +13,7 @@ public class GetContactRequest: NSObject, PostRequest {
     public var propertyCode: String?
     
     public var endPoint: String {
-        return "/ConnectService/json/GetContact"
+        return "/CoreService/json/GetContacts"
     }
     
     public typealias ResponseType = GetContactResponse

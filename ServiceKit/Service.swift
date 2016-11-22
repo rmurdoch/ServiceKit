@@ -18,7 +18,7 @@ public enum ResponseCompletion {
 
 internal final class Service: NSObject {
     
-    let serverURL = "http://10.120.240.181:8001"
+    let serverURL = "http://digihdapp.devhd.office:8002/"// "http://10.120.240.181:8001"
     
     static let sharedInstance = Service()
     
