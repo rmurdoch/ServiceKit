@@ -22,5 +22,5 @@ public class GetContactRequest: NSObject, PostRequest {
 
 public class GetContactResponse: Response {
     
-    var contacts: [GuestProfile]?
+    public var contacts: [GuestProfile]?
 }

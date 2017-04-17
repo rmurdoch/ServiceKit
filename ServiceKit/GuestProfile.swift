@@ -8,20 +8,20 @@
 
 public class GuestProfile: JSONObject {
     
-    var guestProfileId: NSNumber?
-    var guestId: NSNumber?
-    var name: NSString?
+    public var guestProfileId: NSNumber?
+    public var guestId: NSNumber?
+    public var name: NSString?
    
-    var checkOutDate: NSString?
-    var checkOutDateIso: NSString?
-    var extensionString: NSString?
+    public var checkOutDate: NSString?
+    public var checkOutDateIso: NSString?
+    public var extensionString: NSString?
 
-    var isStaff: NSNumber?
-    var optedIn: NSNumber?
-    var doNotDisturb: NSNumber?
-    var banned: NSNumber?
-    var isBlocked: NSNumber?
-    var isLoaded: NSNumber?
+    public var isStaff: NSNumber?
+    public var optedIn: NSNumber?
+    public var doNotDisturb: NSNumber?
+    public var banned: NSNumber?
+    public var isBlocked: NSNumber?
+    public var isLoaded: NSNumber?
     
     
 //    @property (nonatomic, strong) NSArray *attributes;

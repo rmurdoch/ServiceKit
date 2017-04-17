@@ -123,7 +123,23 @@ extension Request {
             dictionary["RequestHeader"] = requestHeader.asJSON
         }
         
-        return (dictionary as NSDictionary).JSONData!
+        
+        let data = (dictionary as NSDictionary).JSONData!
+      
+        guard let JSONSting = NSString.init(data: data, encoding: String.Encoding.utf8.rawValue) else {
+            return Data()
+        }
+        print(JSONSting)
+        
+        guard let JSONData = JSONSting.data(using: String.Encoding.utf8.rawValue) else {
+            return Data()
+        }
+        
+        
+        return JSONData
+        
+        
+//        return (dictionary as NSDictionary).JSONData!
     }
     
     public func send(completion: @escaping (_ completion: ResponseCompletion) -> ()) {

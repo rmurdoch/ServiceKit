@@ -92,7 +92,7 @@ internal extension NSObject {
                         self.setValue(nil, forKeyPath: key.lowerCamel)
                     }
                 } else {
-                    assert(false, "Error: Key is not in object \(key)")
+//                    assert(false, "Error: Key is not in object \(key)")
                 }
             }
         }
